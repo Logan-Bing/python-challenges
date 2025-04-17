@@ -12,4 +12,3 @@ def age_in_days(year, month, days):
 
 print(age_in_days(2003, 8, 26))
 
-
