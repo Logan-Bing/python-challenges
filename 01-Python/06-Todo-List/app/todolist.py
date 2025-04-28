@@ -1,4 +1,24 @@
 
+def save_tasks(todoList):
+    with open("tasks.txt", "w") as f:  # "w" écrase pour repartir propre
+        for task in todoList:
+            line = f"{task['name']},{task['category']},{task['priority']},{task['completed']}\n"
+            f.write(line)
+
+def load_tasks():
+    todoList = []
+    with open("tasks.txt", "r") as f:
+        for line in f:
+            name, category, priority, completed = line.strip().split(",")
+            todoList.append({
+                "name": name,
+                "category": category,
+                "priority": int(priority),
+                "completed": completed == "True"
+            })
+    return todoList
+
+
 def addTask(name, category, priority, todoList) -> None :
     new_task = {'name': name, 'category': category, 'priority': priority, 'completed': False}
     todoList.append(new_task)
@@ -96,3 +116,5 @@ while True:
     elif user_select == "5":
         print('A bientot !')
         break
+
+    save_tasks(todoList)
