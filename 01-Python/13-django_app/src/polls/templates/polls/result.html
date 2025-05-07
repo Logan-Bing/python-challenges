@@ -1,0 +1,6 @@
+<h1>{{question.question_text}}</h1>
+{%  for choice in question.choice_set.all %}
+<p>{{ choice.choice_text }}</p>
+<p>{{ choice.votes }}</p>
+{% endfor %}
+<a href="{% url "polls:detail" question.id %}">Vote again?</a>
