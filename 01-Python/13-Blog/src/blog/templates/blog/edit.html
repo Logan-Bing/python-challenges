@@ -1,0 +1,8 @@
+{{comment}}
+
+<form action="{% url "blog:edit_comment" comment_id=comment.id %}" method="post">
+{% csrf_token %}
+<label for="content">Modifier le commentaire :</label><br>
+<textarea name="content" id="content">{{comment}}</textarea><br>
+<button type="submit">Mettre a jour le commentaire</button>
+</form>
