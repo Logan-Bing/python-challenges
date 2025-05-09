@@ -1,0 +1,7 @@
+<p>bonjour {{user.username}}</p>
+<h1>Hello world home</h1>
+
+<form action="{% url "auth_app:logout" %}" method="post">
+  {% csrf_token %}
+  <button type="submit"> Se deconnecter </button>
+</form>
