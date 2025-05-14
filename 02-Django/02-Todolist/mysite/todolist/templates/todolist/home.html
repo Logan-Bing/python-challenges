@@ -1,0 +1,14 @@
+
+<button> <a href="{% url "todolist:new_task" %}">+Add Task</a></button>
+
+
+<h1>Bienvenue dans votre espace {{user.username}}</h1>
+{% for task in tasks  %}
+  <p>{{task}}</p>
+{% endfor %}
+
+
+<form action="{% url "todolist:logout" %}" method="post">
+  {% csrf_token %}
+  <button type="submit">Se déconnecter</button>
+</form>

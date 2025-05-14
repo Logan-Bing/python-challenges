@@ -1,0 +1,13 @@
+<h1>Sign in</h1>
+<form action="" method="POST">
+  {% csrf_token %}
+  <div class="form-grp">
+    <label for="username">Username</label>
+    <input type="text" name="username" placeholder="Jhon Doe">
+  </div>
+  <div class="form-grp">
+    <label for="password">Password</label>
+    <input type="password" name="password" placeholder="password">
+  </div>
+  <button type="Submit">Se connecter</button>
+</form>
