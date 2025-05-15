@@ -4,7 +4,13 @@
 
 <h1>Bienvenue dans votre espace {{user.username}}</h1>
 {% for task in tasks  %}
-  <p>{{task}}</p>
+  <div>
+    <p>
+      <a href="{% url "todolist:detail_task" task.id %}">{{task}}</a>
+      <a href="{% url "todolist:update_task" task.id %}">Modifier</a>
+    </p>
+  </div>
+
 {% endfor %}
 
 

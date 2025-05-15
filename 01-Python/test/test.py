@@ -1,13 +1,17 @@
-def wave(people):
-    result = []
-    for i, p in enumerate(people):
-        if p.isalpha():
-            wave = people[:i] + p.upper() + people[i+1:]
-            result.append(wave)
+def part_const(n, k, num):
+    #your code here
+    ...
 
-    result = [people[:i] + people[i].upper() + people[i+1:] for i in range(len(people)) if i.isalpha() ]
+print(part_const(10, 3, 2)) # 4
 
-    return result
+1 + 1 + 8
+# 1 + 2 + 7
+1 + 3 + 6
+1 + 4 + 5
+# 2 + 2 + 6
+# 2 + 3 + 5
+# 2 + 4 + 4
+3 + 3 + 4
 
-print(wave('   gap  '))
-# wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+Il faut trouver toute les combinaisons possible pour arriver au résultat de 10
+avec 3 chiffres additionné
